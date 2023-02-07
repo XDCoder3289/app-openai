@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+  <title>Bot</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='content (3).png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <img src="{{ url_for('static', filename='content (3).png') }}" class="icon" />
+  <h3>Salman's Personal ChatGPT Bot</h3>
+  <form action="/" method="post">
+    <input type="text" name="animal" placeholder="Tell me what to do" required />
+    <input type="submit" value="Robot Away" />
+  </form>
+  {% if result %}
+  <p>"---------------------------------------------------------------------"</p>
+  <!-- <p>{{ result }}</p> -->
+  <div class="result">{{ result }}</div>
+  <p>"---------------------------------------------------------------------"</p>
+  {% endif %}
+</body>
